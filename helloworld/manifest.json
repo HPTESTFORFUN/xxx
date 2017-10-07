@@ -1,0 +1,41 @@
+{
+    "manifest_version" : 2,
+    "name" : "Hello",
+    "version" : "1.0",
+    "description" : "just for test",
+    "icons" : {
+        "128" : "icon128.png",
+        "48" : "icon48.png",
+        "16" :"icon16.png"
+    },
+    "browser_action" : {
+        "default_icon" : "icon16.png"
+        
+    },
+    "background" : {
+        "scripts" : ["popupBackground.js"],
+        "persistent" : false
+    },
+    "content_scripts": [
+        {
+            "matches" : ["http://mp3.zing.vn/bai-hat/*"],
+            "js" : ["jquery-3.2.1.min.js", "bootstrap.min.js", "testZing.js"],
+            "css" : ["bootstrap.min.css", "testZing.css"]
+
+        },
+        {
+            "matches" : ["http://www.nhaccuatui.com/bai-hat/*", "http://nhaccuatui.com/bai-hat/*"],
+            "js" : ["jquery-3.2.1.min.js", "testNCT.js"],
+            "css" : ["bootstrap.min.css", "testNCT.css"]
+
+        }
+    ],
+    "permissions" : [
+        "storage",
+        "tabs",
+        "http://mp3.zing.vn/bai-hat/*",
+        "http://www.nhaccuatui.com/bai-hat/*", 
+        "http://nhaccuatui.com/bai-hat/*",
+        "http://*/"
+    ]
+}

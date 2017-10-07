@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chia sẻ bài hát</title>
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="popupDetail.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.2.1.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="angular.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="popupDetail.js"></script>
+</head>
+<body ng-app="appExtension" ng-controller="popupController">
+<div class="titleHeader">
+    <div  id="header"><p id="title"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;Tạo một chia sẻ mới</p></div>
+</div>
+<div class="mainPost">
+<div>
+    <table id="tblInforSong">
+        <tr>
+            <td><p class="textTitle">Bài hát: </p></td>
+            <td><p class="textContent" id="name-song">Unknow</p></td>
+        </tr>
+        <tr>
+            <td><p class="textTitle">Ca sĩ: </p></td>
+            <td><p class="textContent" id="name-singer">Unknow</p></td>
+        </tr>
+        <tr>
+            <td colspan="2"><p class="textTitle">Nội dung: </p></td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea 
+                id="thinking" placeholder="Bạn đang nghĩ gì?" class="form-control" class="textArea"></textarea></td>
+        </tr>
+        <tr>
+            <td><p class="textTitle">Tâm trạng: </p></td>
+            <td><select class="form-control comboboxFeeling" id="cbFeeling">
+                    <option value="happy">Vui</option> 
+                    <option value="sad">Buồn</option> 
+                    <option value="relax">Thư giãn</option> 
+                    <option value="high">Quẩy</option>    
+            </select></td>
+        </tr>
+    </table>
+</div>
+<div style="margin-top: 17px; text-align: center">
+    <button type="button" class="btn btn-success postButton" id="postNowButton">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            &nbsp; Đăng ngay
+    </button>
+</div>
+</div>
+
+</body>
+</html>

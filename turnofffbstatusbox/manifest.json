@@ -1,0 +1,31 @@
+{
+    "manifest_version" : 2,
+    "name" : "Turn off status box on Facebook",
+    "version" : "1.0",
+    "description" : "This extension will help you turn on or off status box on Facebook",
+    "icons" : {
+        "128" : "f_128.png",
+        "48" : "f_48.png",
+        "16" : "f_16.png"
+    },
+    "browser_action" : {
+        "default_icon" : "f_16.png",
+        "default_popup" :  "popup.html"
+    },
+    "background" : {
+        "scripts" : ["jquery-3.2.1.min.js", "background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches" : ["https://www.facebook.com/*", "http://www.facebook.com/*"],
+            "js" : ["jquery-3.2.1.min.js", "action.js"],
+            "css" : ["style.css"]
+
+        }
+    ],
+    "permissions" : [
+        "storage",
+        "https://www.facebook.com/*",
+        "http://www.facebook.com/*"
+    ]
+}
